@@ -10,7 +10,7 @@ const AboutSection = () => {
             <div className="relative overflow-hidden rounded-2xl shadow-large">
               <img
                 src={artistPortrait}
-                alt="Agnya Senghani P - Contemporary Artist and Muralist"
+                alt="Elena Martinez - Contemporary Artist"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -19,35 +19,35 @@ const AboutSection = () => {
           {/* Bio */}
           <div className="animate-slide-up">
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-foreground">
-              About Agnya
+              About the Artist
             </h2>
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Agnya Senghani P is a versatile artist whose work spans from spiritual portraits 
-                to vibrant abstract murals. Based in Mumbai, she creates art that speaks to the 
-                soul while transforming spaces with bold, expressive energy that captivates and 
-                inspires every viewer.
+                Elena Martinez is a contemporary artist whose work bridges the gap between 
+                traditional painting techniques and modern aesthetic sensibilities. Based in 
+                her light-filled studio, she creates pieces that speak to the soul while 
+                elevating the spaces they inhabit.
               </p>
               
               <p>
-                Her artistic journey encompasses multiple mediums - acrylic painting, oil painting, 
-                watercolor, oil pastels, texture art, mixed media, wall painting, and portrait 
-                painting. From Krishna paintings that capture divine essence to motivational 
-                office murals and whimsical cartoon characters.
+                With over eight years of experience in fine arts, Elena specializes in 
+                large-scale wall murals and intimate canvas paintings. Her work is 
+                characterized by soft, organic forms and a carefully curated palette 
+                of warm neutrals and gentle pastels.
               </p>
               
               <p>
-                "My art is a bold, expressive journey of freedom and emotion," Agnya believes. 
-                "I use mixed media—acrylics, oils, textures, and vibrant colors—to bring out 
-                the raw, untamed spirit of creativity. Every stroke reflects my mood, and each 
-                piece tells a story of discovery, intuition, and joy."
+                "Art should feel like coming home," Elena believes. "Each piece I create 
+                is designed to tell a story—sometimes it's the client's story, sometimes 
+                it's the story of the space itself. My goal is always to create something 
+                that feels both timeless and deeply personal."
               </p>
               
               <p className="text-accent-foreground font-medium">
-                For her, art is about feeling alive and connecting with others through visual 
-                language. Her goal is to inspire, explore, and keep evolving as an artist, 
-                creating meaningful experiences that resonate with the human spirit.
+                When she's not painting, Elena enjoys exploring local galleries, 
+                hiking in nature for inspiration, and sharing her knowledge through 
+                workshops for emerging artists.
               </p>
             </div>
           </div>

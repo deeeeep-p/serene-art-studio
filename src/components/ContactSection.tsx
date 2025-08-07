@@ -61,7 +61,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email</h4>
-                  <p className="text-muted-foreground">arthyagnya@gmail.com</p>
+                  <p className="text-muted-foreground">elena@elenamartinezart.com</p>
                 </div>
               </div>
               
@@ -71,7 +71,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Phone</h4>
-                  <p className="text-muted-foreground">+91 9321125885</p>
+                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
                 </div>
               </div>
               
@@ -80,8 +80,8 @@ const ContactSection = () => {
                   <MapPin className="w-5 h-5 text-accent-foreground" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground">Location</h4>
-                  <p className="text-muted-foreground">Mulund, Mumbai<br />Maharashtra, India</p>
+                  <h4 className="font-semibold text-foreground">Studio</h4>
+                  <p className="text-muted-foreground">Downtown Arts District<br />Available by appointment</p>
                 </div>
               </div>
             </div>
@@ -91,11 +91,9 @@ const ContactSection = () => {
               <h4 className="font-semibold text-foreground mb-4">Follow My Work</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://instagram.com/theagnyart"
+                  href="#"
                   className="p-3 bg-card rounded-lg shadow-soft hover:shadow-medium transition-smooth hover:scale-105"
                   aria-label="Follow on Instagram"
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <Instagram className="w-5 h-5 text-accent-foreground" />
                 </a>
