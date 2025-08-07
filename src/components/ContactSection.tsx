@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -10,28 +10,31 @@ const ContactSection = () => {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
-  
+
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simulate form submission
     toast({
       title: "Message sent successfully!",
-      description: "Thank you for your interest. I'll get back to you within 24 hours.",
+      description:
+        "Thank you for your interest. I'll get back to you within 24 hours.",
     });
-    
+
     // Reset form
     setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -43,7 +46,8 @@ const ContactSection = () => {
             Let's Create Together
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up">
-            Ready to transform your space with custom artwork? I'd love to hear about your vision.
+            Looking for custom artwork that speaks to you? Let’s collaborate on
+            something beautiful.{" "}
           </p>
         </div>
 
@@ -53,7 +57,7 @@ const ContactSection = () => {
             <h3 className="text-2xl font-serif font-bold mb-8 text-foreground">
               Get in Touch
             </h3>
-            
+
             <div className="space-y-6 mb-8">
               <div className="flex items-center">
                 <div className="p-3 bg-accent rounded-lg mr-4">
@@ -61,48 +65,45 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Email</h4>
-                  <p className="text-muted-foreground">elena@elenamartinezart.com</p>
+                  <p className="text-muted-foreground">artbyagnya@gmail.com</p>
                 </div>
               </div>
-              
-              <div className="flex items-center">
-                <div className="p-3 bg-accent rounded-lg mr-4">
-                  <Phone className="w-5 h-5 text-accent-foreground" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
-                </div>
-              </div>
-              
+
               <div className="flex items-center">
                 <div className="p-3 bg-accent rounded-lg mr-4">
                   <MapPin className="w-5 h-5 text-accent-foreground" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-foreground">Studio</h4>
-                  <p className="text-muted-foreground">Downtown Arts District<br />Available by appointment</p>
+                  <p className="text-muted-foreground">
+                    Mumbai, India
+                    <br />
+                    Available by appointment
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Follow My Work</h4>
+              <h4 className="font-semibold text-foreground mb-4">
+                Follow My Work
+              </h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/theagnyart?igsh=cGw3bDd5NWRjZTN3&utm_source=qr"
                   className="p-3 bg-card rounded-lg shadow-soft hover:shadow-medium transition-smooth hover:scale-105"
                   aria-label="Follow on Instagram"
                 >
                   <Instagram className="w-5 h-5 text-accent-foreground" />
                 </a>
+
                 <a
-                  href="#"
+                  href="https://www.youtube.com/@theagnyart"
                   className="p-3 bg-card rounded-lg shadow-soft hover:shadow-medium transition-smooth hover:scale-105"
-                  aria-label="Pinterest gallery"
+                  aria-label="YouTube channel"
                 >
-                  <div className="w-5 h-5 bg-accent-foreground rounded-sm"></div>
+                  <Youtube className="w-5 h-5 text-accent-foreground" />
                 </a>
               </div>
             </div>
@@ -113,7 +114,10 @@ const ContactSection = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Name
                   </label>
                   <Input
@@ -127,7 +131,10 @@ const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-2"
+                  >
                     Email
                   </label>
                   <Input
@@ -141,9 +148,12 @@ const ContactSection = () => {
                   />
                 </div>
               </div>
-              
+
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Subject
                 </label>
                 <Input
@@ -157,9 +167,12 @@ const ContactSection = () => {
                   className="shadow-soft"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
                   Message
                 </label>
                 <Textarea
@@ -172,7 +185,7 @@ const ContactSection = () => {
                   className="min-h-[120px] shadow-soft"
                 />
               </div>
-              
+
               <Button
                 type="submit"
                 size="lg"

@@ -21,7 +21,7 @@ const Header = () => {
             onClick={() => scrollToSection("hero")}
             className="text-2xl font-serif font-semibold text-foreground transition-smooth hover:text-accent-foreground"
           >
-            Elena Martinez
+            Agnya Senghani P
           </button>
 
           {/* Desktop Navigation */}

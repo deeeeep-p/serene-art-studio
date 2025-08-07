@@ -16,10 +16,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Elena Martinez</h3>
+            <h3 className="text-2xl font-serif font-bold mb-4">
+              Agnya Senghani P
+            </h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Contemporary artist creating wall and canvas art that tells your story. 
-              Based in the Downtown Arts District.
+              Mixed media artist crafting bold, expressive works for walls,
+              canvases, and beyond.
             </p>
             <div className="flex space-x-4">
               <a
@@ -78,7 +80,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-primary-foreground/60 text-sm mb-4 md:mb-0">
-              © {currentYear} Elena Martinez Art. All rights reserved.
+              © {currentYear} Agnya Senghani P Art. All rights reserved.
             </p>
             <div className="flex items-center text-primary-foreground/60 text-sm">
               <span>Made with</span>

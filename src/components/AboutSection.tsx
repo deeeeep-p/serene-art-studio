@@ -10,7 +10,7 @@ const AboutSection = () => {
             <div className="relative overflow-hidden rounded-2xl shadow-large">
               <img
                 src={artistPortrait}
-                alt="Elena Martinez - Contemporary Artist"
+                alt="Agnya Senghani P - Contemporary Artist"
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -21,33 +21,35 @@ const AboutSection = () => {
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 text-foreground">
               About the Artist
             </h2>
-            
+
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Elena Martinez is a contemporary artist whose work bridges the gap between 
-                traditional painting techniques and modern aesthetic sensibilities. Based in 
-                her light-filled studio, she creates pieces that speak to the soul while 
-                elevating the spaces they inhabit.
+                My art is a bold, expressive journey of freedom, emotion, and
+                exploration. I work primarily with mixed media—acrylics, oils,
+                textures, and vibrant colors—to create pieces that are raw,
+                dynamic, and full of life. Each stroke is deeply intuitive,
+                often guided by my emotional state in the moment—whether that’s
+                calm, energized, reflective, or playful.
               </p>
-              
+
               <p>
-                With over eight years of experience in fine arts, Elena specializes in 
-                large-scale wall murals and intimate canvas paintings. Her work is 
-                characterized by soft, organic forms and a carefully curated palette 
-                of warm neutrals and gentle pastels.
+                I believe in the power of visual storytelling. Every artwork I
+                create has its own personality and narrative. Sometimes, the
+                story is abstract and open to interpretation; other times, it
+                captures a feeling or memory I want to share.
               </p>
-              
+
               <p>
-                "Art should feel like coming home," Elena believes. "Each piece I create 
-                is designed to tell a story—sometimes it's the client's story, sometimes 
-                it's the story of the space itself. My goal is always to create something 
-                that feels both timeless and deeply personal."
+                My process is experimental, layered, and rooted in spontaneity.
+                I don’t seek perfection—I seek honesty. For me, art is about
+                feeling alive. It’s about connecting with people, evoking
+                emotion, and encouraging others to embrace their own creativity.
               </p>
-              
+
               <p className="text-accent-foreground font-medium">
-                When she's not painting, Elena enjoys exploring local galleries, 
-                hiking in nature for inspiration, and sharing her knowledge through 
-                workshops for emerging artists.
+                Through every canvas, my goal is to inspire, to explore the
+                unknown, and to continue evolving—not just as an artist, but as
+                a human being.
               </p>
             </div>
           </div>

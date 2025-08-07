@@ -4,22 +4,40 @@ import { Button } from "@/components/ui/button";
 const services = [
   {
     icon: Palette,
-    title: "Custom Canvas Paintings",
-    description: "Original artwork tailored to your space, style, and personal vision. From intimate portraits to large statement pieces.",
-    features: ["Personal consultation", "Custom sizing", "Color matching", "Framing options"]
+    title: "Canvas Paintings",
+    description:
+      "Original artwork tailored to your space, style, and personal vision. From intimate portraits to large statement pieces.",
+    features: [
+      "Personal consultation",
+      "Custom sizing",
+      "Color matching",
+      "Mixed media ",
+    ],
   },
   {
     icon: Home,
     title: "Wall Murals",
-    description: "Transform your space with bespoke wall art. Perfect for homes, offices, restaurants, and commercial spaces.",
-    features: ["Site consultation", "Design mockups", "Professional installation", "Protective finishing"]
+    description:
+      "Transform your space with bespoke wall art. Perfect for homes, offices, restaurants, and commercial spaces.",
+    features: [
+      "Site consultation",
+      "Design mockups",
+      "Interior-matched color schemes",
+      "Protective finishing",
+    ],
   },
   {
     icon: Sparkles,
-    title: "Art Restoration",
-    description: "Breathe new life into treasured pieces with careful restoration and conservation techniques.",
-    features: ["Damage assessment", "Color matching", "Archival materials", "Documentation"]
-  }
+    title: "Custom Commissions",
+    description:
+      "Bring your ideas to life on unique surfaces, whether it's shoes, mini canvases, or everyday objects.",
+    features: [
+      "Personalized artwork on various surfaces",
+      "Custom themes and color palettes",
+      "Durable, high-quality materials",
+      "Consultation and design preview",
+    ],
+  },
 ];
 
 const ServicesSection = () => {
@@ -35,7 +53,8 @@ const ServicesSection = () => {
             Services & Commissions
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-slide-up">
-            Bring your vision to life with custom artwork designed specifically for your space, style, and story.
+            Bring your vision to life with custom artwork designed specifically
+            for your space, style, and story.
           </p>
         </div>
 
@@ -54,14 +73,17 @@ const ServicesSection = () => {
                   {service.title}
                 </h3>
               </div>
-              
+
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 {service.description}
               </p>
-              
+
               <ul className="space-y-2">
                 {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center text-sm text-muted-foreground">
+                  <li
+                    key={feature}
+                    className="flex items-center text-sm text-muted-foreground"
+                  >
                     <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3"></div>
                     {feature}
                   </li>
@@ -72,7 +94,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Commission Process */}
-        <div className="bg-card rounded-2xl p-8 md:p-12 shadow-large max-w-4xl mx-auto text-center">
+        {/* <div className="bg-card rounded-2xl p-8 md:p-12 shadow-large max-w-4xl mx-auto text-center">
           <MessageCircle className="w-12 h-12 text-accent mx-auto mb-6" />
           <h3 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-foreground">
             Ready to Commission Your Piece?
@@ -113,7 +135,7 @@ const ServicesSection = () => {
           >
             Request a Commission
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
