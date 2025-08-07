@@ -16,13 +16,13 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-serif font-bold text-foreground mb-6 animate-fade-in">
-          Elena Martinez
+          Agnya Senghani P
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-slide-up font-light tracking-wide">
-          Wall & Canvas Art That Tells a Story
+          Artist | Muralist | Creative Visionary
         </p>
         <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto animate-slide-up leading-relaxed">
-          Contemporary artist creating bespoke wall murals and canvas paintings that transform spaces into meaningful narratives.
+          From spiritual portraits to vibrant murals, transforming spaces with diverse artistic expressions that inspire and captivate.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">

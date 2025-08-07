@@ -17,26 +17,26 @@ const galleryItems: GalleryItem[] = [
   {
     id: 1,
     src: gallery1,
-    alt: "Abstract canvas painting with soft beige and cream tones",
-    title: "Whispered Dreams",
+    alt: "Spiritual Krishna painting with vibrant blue and yellow colors",
+    title: "Krishna Divine",
     category: "Canvas Paintings",
-    description: "A contemplative piece exploring the space between consciousness and reverie."
+    description: "Spiritual acrylic painting capturing the divine essence with bold blues and golden accents."
   },
   {
     id: 2,
     src: gallery2,
-    alt: "Large wall mural with flowing organic shapes",
-    title: "Flowing Harmony",
+    alt: "Abstract mural with flowing burgundy lines on white walls",
+    title: "Abstract Flow",
     category: "Wall Murals",
-    description: "Custom mural designed to create a sense of movement and tranquility in this modern living space."
+    description: "Dynamic abstract mural featuring flowing lines and curves that bring energy to the space."
   },
   {
     id: 3,
     src: gallery3,
-    alt: "Contemporary geometric canvas artwork",
-    title: "Structured Serenity",
-    category: "Canvas Paintings",
-    description: "Minimalist composition balancing geometric precision with organic warmth."
+    alt: "Realistic landscape mural with scenic beauty",
+    title: "Scenic Escape",
+    category: "Wall Murals",
+    description: "Breathtaking landscape mural that transforms indoor spaces into windows to nature."
   }
 ];
 
@@ -44,7 +44,7 @@ const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
   const [activeFilter, setActiveFilter] = useState("All");
 
-  const categories = ["All", "Canvas Paintings", "Wall Murals", "Custom Work"];
+  const categories = ["All", "Canvas Paintings", "Wall Murals", "Portrait Paintings", "Texture Art", "Mixed Media"];
 
   const filteredItems = activeFilter === "All" 
     ? galleryItems 

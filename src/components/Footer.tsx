@@ -16,21 +16,23 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Elena Martinez</h3>
+            <h3 className="text-2xl font-serif font-bold mb-4">Agnya Senghani P</h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Contemporary artist creating wall and canvas art that tells your story. 
-              Based in the Downtown Arts District.
+              Versatile artist creating vibrant wall murals and diverse canvas art. 
+              Based in Mumbai, transforming spaces with bold, expressive creativity.
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://instagram.com/theagnyart"
                 className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-primary-foreground/20 transition-smooth"
                 aria-label="Follow on Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="mailto:elena@elenamartinezart.com"
+                href="mailto:arthyagnya@gmail.com"
                 className="p-2 bg-primary-foreground/10 rounded-lg hover:bg-primary-foreground/20 transition-smooth"
                 aria-label="Send email"
               >
@@ -65,11 +67,11 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-3 text-primary-foreground/80">
-              <li>Custom Canvas Paintings</li>
+              <li>Canvas Paintings</li>
               <li>Wall Murals</li>
-              <li>Commission Work</li>
-              <li>Art Consultation</li>
-              <li>Private Workshops</li>
+              <li>Portrait Paintings</li>
+              <li>Texture & Mixed Media</li>
+              <li>Custom Installations</li>
             </ul>
           </div>
         </div>
@@ -78,7 +80,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-primary-foreground/60 text-sm mb-4 md:mb-0">
-              © {currentYear} Elena Martinez Art. All rights reserved.
+              © {currentYear} Agnya Senghani P. All rights reserved.
             </p>
             <div className="flex items-center text-primary-foreground/60 text-sm">
               <span>Made with</span>

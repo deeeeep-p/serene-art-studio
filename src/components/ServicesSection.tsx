@@ -4,21 +4,21 @@ import { Button } from "@/components/ui/button";
 const services = [
   {
     icon: Palette,
-    title: "Custom Canvas Paintings",
-    description: "Original artwork tailored to your space, style, and personal vision. From intimate portraits to large statement pieces.",
-    features: ["Personal consultation", "Custom sizing", "Color matching", "Framing options"]
+    title: "Canvas Art Collection",
+    description: "Original paintings in diverse styles - acrylic, oil, watercolor, mixed media, spiritual artwork, and portrait paintings.",
+    features: ["Multiple mediums", "Portrait paintings", "Spiritual themes", "Abstract compositions"]
   },
   {
     icon: Home,
-    title: "Wall Murals",
-    description: "Transform your space with bespoke wall art. Perfect for homes, offices, restaurants, and commercial spaces.",
-    features: ["Site consultation", "Design mockups", "Professional installation", "Protective finishing"]
+    title: "Wall Murals & Paintings", 
+    description: "From abstract designs to realistic landscapes, spiritual themes to motivational office murals, cartoon characters to elegant botanical patterns.",
+    features: ["Abstract & realistic styles", "Educational & office spaces", "Spiritual & cultural themes", "Custom installations"]
   },
   {
     icon: Sparkles,
-    title: "Art Restoration",
-    description: "Breathe new life into treasured pieces with careful restoration and conservation techniques.",
-    features: ["Damage assessment", "Color matching", "Archival materials", "Documentation"]
+    title: "Texture & Mixed Media",
+    description: "Innovative texture art and mixed media installations that add dimension, character, and vibrant energy to any space.",
+    features: ["3D texture work", "Mixed media portraits", "Custom digital murals", "Installation art"]
   }
 ];
 
