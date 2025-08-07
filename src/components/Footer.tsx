@@ -71,7 +71,6 @@ const Footer = () => {
               <li>Wall Murals</li>
               <li>Commission Work</li>
               <li>Art Consultation</li>
-              <li>Private Workshops</li>
             </ul>
           </div>
         </div>
