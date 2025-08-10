@@ -32,21 +32,21 @@ const AboutSection = () => {
                 calm, energized, reflective, or playful.
               </p>
 
-              <p>
+              <p className="hidden md:block">
                 I believe in the power of visual storytelling. Every artwork I
                 create has its own personality and narrative. Sometimes, the
                 story is abstract and open to interpretation; other times, it
                 captures a feeling or memory I want to share.
               </p>
 
-              <p>
+              <p className="hidden md:block">
                 My process is experimental, layered, and rooted in spontaneity.
                 I don’t seek perfection—I seek honesty. For me, art is about
                 feeling alive. It’s about connecting with people, evoking
                 emotion, and encouraging others to embrace their own creativity.
               </p>
 
-              <p className="text-accent-foreground font-medium">
+              <p className="hidden md:block text-accent-foreground font-medium">
                 Through every canvas, my goal is to inspire, to explore the
                 unknown, and to continue evolving—not just as an artist, but as
                 a human being.

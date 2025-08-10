@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
+import { Form } from "react-router-dom";
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   subject: "",
+  //   message: "",
+  // });
+  const form = useRef();
 
   const { toast } = useToast();
 
@@ -19,24 +22,46 @@ const ContactSection = () => {
     e.preventDefault();
 
     // Simulate form submission
-    toast({
-      title: "Message sent successfully!",
-      description:
-        "Thank you for your interest. I'll get back to you within 24 hours.",
-    });
+    // console.log(formData);
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_APP_SERVICE_ID,
+        import.meta.env.VITE_APP_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: import.meta.env.VITE_APP_PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          toast({
+            title: "Message sent successfully!",
+            description:
+              "Thank you for your interest. I will get back to you as soon.",
+          });
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast({
+            title: "Error sending message ☹️",
+            description:
+              "There was an issue sending your message. Please try again later.",
+          });
+        }
+      );
 
     // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    // setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  // const handleChange = (
+  //   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //   setFormData({
+  //     ...formData,
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
   return (
     <section id="contact" className="py-24 bg-gradient-warm">
@@ -111,12 +136,13 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="animate-slide-up">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label
                     htmlFor="name"
                     className="block text-sm font-medium text-foreground mb-2"
+                    name="user_name"
                   >
                     Name
                   </label>
@@ -125,8 +151,8 @@ const ContactSection = () => {
                     name="name"
                     type="text"
                     required
-                    value={formData.name}
-                    onChange={handleChange}
+                    // value={formData.name}
+                    // onChange={handleChange}
                     className="shadow-soft"
                   />
                 </div>
@@ -134,6 +160,7 @@ const ContactSection = () => {
                   <label
                     htmlFor="email"
                     className="block text-sm font-medium text-foreground mb-2"
+                    name="user_email"
                   >
                     Email
                   </label>
@@ -142,8 +169,8 @@ const ContactSection = () => {
                     name="email"
                     type="email"
                     required
-                    value={formData.email}
-                    onChange={handleChange}
+                    // value={formData.email}
+                    // onChange={handleChange}
                     className="shadow-soft"
                   />
                 </div>
@@ -152,17 +179,18 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="subject"
+                  name="subject"
                   className="block text-sm font-medium text-foreground mb-2"
                 >
                   Subject
                 </label>
                 <Input
                   id="subject"
-                  name="subject"
                   type="text"
+                  name="subject"
                   required
-                  value={formData.subject}
-                  onChange={handleChange}
+                  // value={formData.subject}
+                  // onChange={handleChange}
                   placeholder="Commission inquiry, question, etc."
                   className="shadow-soft"
                 />
@@ -179,8 +207,8 @@ const ContactSection = () => {
                   id="message"
                   name="message"
                   required
-                  value={formData.message}
-                  onChange={handleChange}
+                  // value={formData.message}
+                  // onChange={handleChange}
                   placeholder="Tell me about your project, space, timeline, and any specific ideas you have in mind..."
                   className="min-h-[120px] shadow-soft"
                 />
@@ -190,6 +218,7 @@ const ContactSection = () => {
                 type="submit"
                 size="lg"
                 className="w-full bg-primary text-primary-foreground hover:shadow-medium hover:scale-105 transition-smooth"
+                onClick={handleSubmit}
               >
                 Send Message
               </Button>
