@@ -18,15 +18,24 @@ const ContactSection = () => {
 
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Simulate form submission
+    // Get the form element from the event
+    const formElement = e.currentTarget;
+
+    // Check if form is valid (this should already be done by browser, but good to double-check)
+    if (!formElement.checkValidity()) {
+      formElement.reportValidity();
+      return;
+    }
+
+    // Send email using EmailJS
     emailjs
       .sendForm(
         import.meta.env.VITE_APP_SERVICE_ID,
         import.meta.env.VITE_APP_TEMPLATE_ID,
-        form.current,
+        formElement, // Use the form element from the event
         {
           publicKey: import.meta.env.VITE_APP_PUBLIC_KEY,
         }
@@ -36,8 +45,11 @@ const ContactSection = () => {
           toast({
             title: "Message sent successfully!",
             description:
-              "Thank you for your interest. I will get back to you as soon.",
+              "Thank you for your interest. I will get back to you as soon as possible.",
           });
+
+          // Reset the form
+          formElement.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -48,9 +60,6 @@ const ContactSection = () => {
           });
         }
       );
-
-    // Reset form
-    // setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   // const handleChange = (
@@ -223,7 +232,7 @@ const ContactSection = () => {
                 Send Message
               </Button>
             </form> */}
-            <form ref={form} className="space-y-6">
+            <form ref={form} className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-3 gap-4">
                 <div>
                   <label
@@ -273,7 +282,6 @@ const ContactSection = () => {
                     id="contact"
                     name="contact"
                     type="tel" // or "text" if you want general contact info
-                    required
                     // value={formData.contact}
                     // onChange={handleChange}
                     className="shadow-soft"
@@ -323,10 +331,10 @@ const ContactSection = () => {
                 type="submit"
                 size="lg"
                 className="w-full bg-primary text-primary-foreground hover:shadow-medium hover:scale-105 transition-smooth"
-                onClick={handleSubmit}
               >
                 Send Message
               </Button>
+           
             </form>
           </div>
         </div>
