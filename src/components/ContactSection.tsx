@@ -22,7 +22,6 @@ const ContactSection = () => {
     e.preventDefault();
 
     // Simulate form submission
-    // console.log(formData);
     emailjs
       .sendForm(
         import.meta.env.VITE_APP_SERVICE_ID,
@@ -136,7 +135,7 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="animate-slide-up">
-            <form ref={form} className="space-y-6">
+            {/* <form ref={form} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <label
@@ -170,6 +169,112 @@ const ContactSection = () => {
                     type="email"
                     required
                     // value={formData.email}
+                    // onChange={handleChange}
+                    className="shadow-soft"
+                  />
+                </div>
+                
+              </div>
+
+              <div>
+                <label
+                  htmlFor="subject"
+                  name="subject"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
+                  Subject
+                </label>
+                <Input
+                  id="subject"
+                  type="text"
+                  name="subject"
+                  required
+                  // value={formData.subject}
+                  // onChange={handleChange}
+                  placeholder="Commission inquiry, question, etc."
+                  className="shadow-soft"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-foreground mb-2"
+                >
+                  Message
+                </label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  required
+                  // value={formData.message}
+                  // onChange={handleChange}
+                  placeholder="Tell me about your project, space, timeline, and any specific ideas you have in mind..."
+                  className="min-h-[120px] shadow-soft"
+                />
+              </div>
+
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full bg-primary text-primary-foreground hover:shadow-medium hover:scale-105 transition-smooth"
+                onClick={handleSubmit}
+              >
+                Send Message
+              </Button>
+            </form> */}
+            <form ref={form} className="space-y-6">
+              <div className="grid md:grid-cols-3 gap-4">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-foreground mb-2"
+                    name="user_name"
+                  >
+                    Name
+                  </label>
+                  <Input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    // value={formData.name}
+                    // onChange={handleChange}
+                    className="shadow-soft"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-2"
+                    name="user_email"
+                  >
+                    Email
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    // value={formData.email}
+                    // onChange={handleChange}
+                    className="shadow-soft"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="contact"
+                    className="block text-sm font-medium text-foreground mb-2"
+                    name="user_contact"
+                  >
+                    Contact
+                  </label>
+                  <Input
+                    id="contact"
+                    name="contact"
+                    type="tel" // or "text" if you want general contact info
+                    required
+                    // value={formData.contact}
                     // onChange={handleChange}
                     className="shadow-soft"
                   />

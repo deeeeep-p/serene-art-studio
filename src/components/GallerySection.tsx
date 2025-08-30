@@ -24,10 +24,10 @@ const galleryItems: GalleryItem[] = [
     id: 1,
     src: gallery1,
     alt: "Abstract canvas painting with soft beige and cream tones",
-    title: "Whispered Dreams",
+    title: "Mixed Media on Canvas",
     category: "Canvas Paintings",
     description:
-      "A contemplative piece exploring the space between consciousness and reverie.",
+      "Customized portrait painting comissioned to be of size 2'x3'.",
   },
   {
     id: 2,
@@ -41,56 +41,55 @@ const galleryItems: GalleryItem[] = [
   {
     id: 3,
     src: gallery4,
-    alt: "Large wall mural with flowing organic shapes",
-    title: "Realistic Landscape",
+    alt: "Large wall mural with typographic design",
+    title: "Typographic Wall Mural",
     category: "Wall Murals",
     description:
-      "Custom mural designed to create a sense of movement and tranquility in this modern living space.",
+      "Office Mural (Motivational Area): A customized wall mural created to inspireand motivate employees, adding positive energy to the office environment.",
   },
   {
     id: 4,
     src: gallery5,
-    alt: "Large wall mural with flowing organic shapes",
-    title: "Realistic Landscape",
+    alt: "Textured wall art with vibrant colors",
+    title: "Texteured Wall Art",
     category: "Wall Murals",
     description:
-      "Custom mural designed to create a sense of movement and tranquility in this modern living space.",
+      "School Project: A creative wall painting combined with textured art, designed especially for a vibrant and educational school environment.",
   },
   {
     id: 6,
     src: gallery7,
     alt: "Abstract canvas painting with soft beige and cream tones",
-    title: "Whispered Dreams",
+    title: "Couple Portrait Painting",
     category: "Canvas Paintings",
     description:
-      "A contemplative piece exploring the space between consciousness and reverie.",
+      "A heartfelt portrait of size 2'x3',  capturing the essence of a couple, blending realism with artistic expression.",
   },
   {
     id: 5,
     src: gallery3,
     alt: "Contemporary geometric canvas artwork",
-    title: "Structured Serenity",
+    title: "Abstract Canvas Painting",
     category: "Canvas Paintings",
     description:
-      "Minimalist composition balancing geometric precision with organic warmth.",
+      "A portrait of a woman merging with butterflies, her face and hair entwined with their wings, beneath a purple night sky illuminated by the moon and dark branches.",
   },
   {
     id: 10,
     src: gallery9,
-    alt: "Abstract canvas painting with soft beige and cream tones",
-    title: "Whispered Dreams",
+    alt: "Hand-painted sneakers with bold comic-style design",
+    title: "Hand-Painted Sneakers",
     category: "Custom Work",
     description:
-      "A contemplative piece exploring the space between consciousness and reverie.",
+      "A pair of hand-painted sneakers styled with bold outlines and shading to mimic a comic-book illustration, giving the shoes a unique 2D cartoon effect.",
   },
   {
     id: 13,
     src: gallery11,
     alt: "Abstract canvas painting with soft beige and cream tones",
-    title: "Whispered Dreams",
+    title: "Mini-Canvas Art",
     category: "Custom Work",
-    description:
-      "A contemplative piece exploring the space between consciousness and reverie.",
+    description: "A set of mini-canvas artworks, each measuring 6x6 inches.",
   },
 ];
 
